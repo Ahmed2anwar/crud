@@ -1,0 +1,78 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container w-50 mx-auto my-5">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="mb-4">
+          <label for="productName" class="fw-bold">Product Name</label>
+          <input type="text" id="productName" class="form-control" required />
+          <div id="alertName" class="alert ">
+            must contain 1uppercase
+          </div>
+        </div>
+        <div class="mb-4">
+          <label for="productCategory" class="fw-bold">Product Category</label>
+          <input type="text" id="productCategory" class="form-control" />
+          <div id="alertCategory" class="alert ">
+            must contain Category name
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="mb-4">
+          <label for="productPrice" class="fw-bold">Product Price</label>
+          <input type="number" id="productPrice" class="form-control" />
+          <div id="alertPrice" class="alert ">
+            must contain atleast 4 number
+          </div>
+        </div>
+        <div class="mb-4">
+          <label for="Seller" class="fw-bold">Seller</label>
+          <input type="text" id="Seller" class="form-control" />
+          <div id="alertSeller" class="alert ">
+            must contain name of seller
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <label for="productDescription " class="fw-bold">Product description</label>
+      <textarea id="productDescription" class="form-control"></textarea>
+      <div id="alertDescription" class="alert ">
+        must contain description
+      </div>
+    </div>
+    <button type="button" onclick="add()" id="myBtn" class="btn btn-primary">Add Product</button>
+  </div>
+
+  <div class="container">
+    <input type="text" id="searchInput" onkeyup="searchData()" placeholder="Search....."
+      class="form-control w-50 mx-auto" />
+
+    <table class="m-auto w-75 table btn- table-striped mt-5">
+      <thead>
+        <th>ID</th>
+        <th>ProductName</th>
+        <th>ProductPrice</th>
+        <th>Seller</th>
+        <th>ProductCategory</th>
+        <th>ProductDescription</th>
+        <th>Update</th>
+        <th>Delete</th>
+      </thead>
+
+      <tbody id="tableBody"></tbody>
+    </table>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
